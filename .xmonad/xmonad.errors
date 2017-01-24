@@ -1,0 +1,45 @@
+
+xmonad.hs:12:1: Warning:
+    Module ‘XMonad.Hooks.ICCCMFocus’ is deprecated:
+      XMonad.Hooks.ICCCMFocus: xmonad>0.10 core merged issue 177
+
+xmonad.hs:28:33: Warning: Tab character
+
+xmonad.hs:29:38: Warning: Tab character
+
+xmonad.hs:30:39: Warning: Tab character
+
+xmonad.hs:31:29: Warning: Tab character
+
+xmonad.hs:33:13: Warning: Tab character
+
+xmonad.hs:33:33: Warning: Tab character
+
+xmonad.hs:34:57: Warning: Tab character
+
+xmonad.hs:59:1: Warning: Tab character
+
+xmonad.hs:60:8: Warning: Tab character
+
+xmonad.hs:71:15: Warning:
+    In the use of ‘defaultConfig’
+    (imported from XMonad, but defined in XMonad.Config):
+    Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."
+
+xmonad.hs:81:105: Warning:
+    In the use of ‘defaultConfig’
+    (imported from XMonad, but defined in XMonad.Config):
+    Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."
+
+xmonad.hs:82:1: Warning: Tab character
+
+xmonad.hs:88:1: Warning: Tab character
+
+xmonad.hs:89:1: Warning: Tab character
+
+xmonad.hs:90:1: Warning: Tab character
+
+xmonad.hs:96:78: Warning:
+    In the use of ‘takeTopFocus’
+    (imported from XMonad.Hooks.ICCCMFocus):
+    Deprecated: "XMonad.Hooks.ICCCMFocus: xmonad>0.10 core merged issue 177"

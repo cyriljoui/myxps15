@@ -1,0 +1,14 @@
+# Disable touch screen
+xinput disable 12
+#xrandr --output eDP1 --mode 2048x1152
+#synclient TapButton2=0
+synclient ClickFinger2=0
+synclient TapButton3=0
+synclient ClickFinger3=0
+synclient TapButton2=3
+synclient ClickFinger2=3
+#synclient HorizTwoFingerScroll=0
+#synclient VertTwoFingerScroll=0
+#synclient RightButtonAreaLeft=0
+#synclient RightButtonAreaTop=0
+/usr/bin/touchegg /home/popom/.config/autostart/touchegg.conf &

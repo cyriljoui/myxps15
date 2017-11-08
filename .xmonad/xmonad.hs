@@ -34,6 +34,8 @@ myManageHook = composeAll
     , title 	=? "Windows2008"	   --> doF (W.shift "11:vmwin")
     , stringProperty "WM_COMMAND" =? "MacOsVM"          	   --> doF (W.shift "10")
     , resource  =? "Do"   --> doIgnore
+    , className =? "trayer"	--> doIgnore
+    , resource 	=? "trayer"	--> doIgnore
     ]
 
 myWorkspaces  = ["1:www","2:dev","3:exec local","4:db","5:mails","6:webservices", "7", "8", "9","10:", "11:vmwin", "12:vmmac"]
@@ -80,8 +82,8 @@ main = do
       replace
       xmproc <- spawnPipe "xmobar"
       xmonad $ withUrgencyHook NoUrgencyHook $ azertyConfig {
-                          --manageHook = ( isFullscreen --> doFullFloat ) <+> myManageHook <+> manageHook defaultConfig,
-			  manageHook = manageDocks <+> manageHook defaultConfig,
+                          manageHook = ( isFullscreen --> doFullFloat ) <+> myManageHook <+> manageHook defaultConfig,
+--			  manageHook = manageDocks <+> manageHook defaultConfig,
                           keys = newKeys,
                           modMask    = mod4Mask,
                           workspaces = myWorkspaces,

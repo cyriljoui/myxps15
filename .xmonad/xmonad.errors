@@ -7,22 +7,22 @@ xmonad.hs:28:33: warning: [-Wtabs]
     Tab character found here, and in 26 further locations.
     Please use spaces instead.
 
-xmonad.hs:72:15: warning: [-Wdeprecations]
+xmonad.hs:74:15: warning: [-Wdeprecations]
     In the use of ‘defaultConfig’
     (imported from XMonad, but defined in XMonad.Config):
     Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."
 
-xmonad.hs:84:67: warning: [-Wdeprecations]
+xmonad.hs:85:105: warning: [-Wdeprecations]
     In the use of ‘defaultConfig’
     (imported from XMonad, but defined in XMonad.Config):
     Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."
 
-xmonad.hs:96:64: warning: [-Wdeprecations]
+xmonad.hs:98:64: warning: [-Wdeprecations]
     In the use of ‘defaultConfig’
     (imported from XMonad, but defined in XMonad.Config):
     Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."
 
-xmonad.hs:101:78: warning: [-Wdeprecations]
+xmonad.hs:103:78: warning: [-Wdeprecations]
     In the use of ‘takeTopFocus’
     (imported from XMonad.Hooks.ICCCMFocus):
     Deprecated: "XMonad.Hooks.ICCCMFocus: xmonad>0.10 core merged issue 177"

@@ -21,11 +21,12 @@ import XMonad.Layout.Tabbed
 import XMonad.Layout.ToggleLayouts
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Layout.Groups.Examples
-
+import XMonad.Util.Replace
 
 myManageHook = composeAll
     [ resource  =? "Firefox"       --> doF (W.shift "www")
     , className =? "Thunderbird"	   --> doF (W.shift "5:mails")
+    , className =? "Vlc" 		   --> doFloat 
     , className =? "Chromium-browser"	   --> doF (W.shift "1:www")
     , className =? "jetbrains-idea-ce"	   --> doF (W.shift "2:dev")
     , className =? "HipChat"		   --> doF (W.shift "7")
@@ -76,19 +77,23 @@ myBorderColor = "#555"
 myBorderWidth = 1
 
 main = do
+      replace
       xmproc <- spawnPipe "xmobar"
       xmonad $ withUrgencyHook NoUrgencyHook $ azertyConfig {
-                          manageHook = ( isFullscreen --> doFullFloat ) <+> myManageHook <+> manageHook defaultConfig,
-			  --manageHook = manageDocks <+> manageHook defaultConfig,
+                          --manageHook = ( isFullscreen --> doFullFloat ) <+> myManageHook <+> manageHook defaultConfig,
+			  manageHook = manageDocks <+> manageHook defaultConfig,
                           keys = newKeys,
                           modMask    = mod4Mask,
                           workspaces = myWorkspaces,
                           layoutHook = smartBorders (avoidStruts $ myLayout),
+--                          layoutHook = avoidStruts $ layoutHook defaultConfig,
                           startupHook = setWMName "LG3D",
 			  focusedBorderColor = myFocusedBorderColor,
 			  normalBorderColor = myBorderColor,
 			  borderWidth = myBorderWidth,
+--			  terminal = "xtermcjo",
                           terminal = "terminator",
+			  handleEventHook    = handleEventHook defaultConfig <+> docksEventHook,
                           logHook = (dynamicLogWithPP $ xmobarPP
                                     { ppOutput = hPutStrLn xmproc
                                     , ppCurrent = xmobarColor "#19F" "" . wrap "[" "]"
